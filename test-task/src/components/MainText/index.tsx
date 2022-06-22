@@ -1,6 +1,6 @@
 import "./styles.css";
 
-const Main = () => {
+const MainText = () => {
   return (
     <div className="Main-text">
       <h1>Portfolio</h1>
@@ -12,4 +12,4 @@ const Main = () => {
   );
 };
 
-export default Main;
+export default MainText;
