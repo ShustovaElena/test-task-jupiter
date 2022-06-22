@@ -1,0 +1,19 @@
+.Main-text {
+    display: block;
+    padding-top: 93px;
+    text-align: center;
+    color: var(--main-text-color);
+}
+
+.Main-text h1 {
+    width: 256px;
+    margin: 0 auto;
+    font-size: 4rem;
+}
+
+.Main-text p {
+    width: 570px;
+    padding-top: 34px;
+    margin: 0 auto;
+    color: rgba(255, 255, 255, 0.5);
+}
