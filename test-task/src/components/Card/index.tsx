@@ -1,5 +1,6 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { ICard } from "../../types";
+import CategoryButton from "../CategoryButton";
 import DeleteButton from "../DeleteButton";
 import "./styles.css";
 
@@ -7,8 +8,11 @@ const Card = (props: ICard) => {
   const { src, name, category } = props;
   const [isActive, setIsActive] = useState(false);
 
-  const addActiveClass = () => {
-    setIsActive(!isActive);
+  const addActiveClass = (e: React.MouseEvent) => {
+    console.log(e.target);
+    if ((e.target as HTMLElement).innerHTML !== category) {
+      setIsActive(!isActive);
+    }
   };
 
   return (
@@ -20,7 +24,7 @@ const Card = (props: ICard) => {
       }}
       onClick={addActiveClass}
     >
-      <button className="Category-button">{category}</button>
+      <CategoryButton category={category} />
       <p className="Card-name">{name}</p>
       {isActive && <DeleteButton name={name} />}
     </div>
