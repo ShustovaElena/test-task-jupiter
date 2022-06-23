@@ -1,8 +1,8 @@
 import React from "react";
-import { setFilterData } from "../../redux/dataSlice";
+import { setActiveButtonName, setFilterData } from "../../redux/dataSlice";
 import { useAppDispatch, useAppSelector } from "../../redux/hooks";
 
-interface ICategoryButton {
+export interface ICategoryButton {
   category: string;
 }
 
@@ -14,6 +14,7 @@ const CategoryButton = (props: ICategoryButton) => {
   const changeCategory = () => {
     const newData = data.filter((item) => item.category === category);
     dispatch(setFilterData(newData));
+    dispatch(setActiveButtonName(category));
   };
 
   return (

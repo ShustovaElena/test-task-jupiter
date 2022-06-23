@@ -1,28 +1,31 @@
 import React from "react";
-import { setFilterData } from "../../redux/dataSlice";
+import { setActiveButtonName } from "../../redux/dataSlice";
 import { useAppDispatch, useAppSelector } from "../../redux/hooks";
+import MenuButton from "../MenuButton";
 import "./styles.css";
+
+const listMenu = ["Show All", "Design", "Branding", "Illustration", "Motion"];
 
 const Navigation = () => {
   const dispatch = useAppDispatch();
-  const data = useAppSelector((state) => state.data.initialData);
+  const activeButtonName = useAppSelector(
+    (state) => state.data.activeButtonName
+  );
 
   const menuHandler = (e: React.MouseEvent) => {
     const target = (e.target as HTMLLIElement).innerHTML;
-    let newData = data.filter((item) => item.category === target);
-    if (target === "Show All") {
-      newData = data;
-    }
-    dispatch(setFilterData(newData));
+    dispatch(setActiveButtonName(target));
   };
 
   return (
     <ul className="Card-menu" onClick={menuHandler}>
-      <li className="Link-menu">Show All</li>
-      <li className="Link-menu">Design</li>
-      <li className="Link-menu">Branding</li>
-      <li className="Link-menu">Illustration</li>
-      <li className="Link-menu">Motion</li>
+      {listMenu.map((item, index) => (
+        <MenuButton
+          category={item}
+          activeButton={activeButtonName}
+          key={index}
+        />
+      ))}
     </ul>
   );
 };

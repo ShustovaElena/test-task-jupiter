@@ -6,6 +6,7 @@ export const dataSlice = createSlice({
   initialState: {
     initialData: data,
     changedValue: data,
+    activeButtonName: "Show All",
   },
   reducers: {
     setFilterData: (state, action) => {
@@ -14,9 +15,13 @@ export const dataSlice = createSlice({
     setLoadData: (state, action) => {
       state.initialData = action.payload;
     },
+    setActiveButtonName: (state, action) => {
+      state.activeButtonName = action.payload;
+    },
   },
 });
 
-export const { setFilterData, setLoadData } = dataSlice.actions;
+export const { setFilterData, setLoadData, setActiveButtonName } =
+  dataSlice.actions;
 
 export default dataSlice.reducer;
