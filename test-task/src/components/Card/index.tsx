@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ICard } from "../../types";
+import DeleteButton from "../DeleteButton";
 import "./styles.css";
 
 const Card = (props: ICard) => {
@@ -21,6 +22,7 @@ const Card = (props: ICard) => {
     >
       <button className="Category-button">{category}</button>
       <p className="Card-name">{name}</p>
+      {isActive && <DeleteButton name={name} />}
     </div>
   );
 };
