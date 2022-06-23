@@ -1,5 +1,5 @@
 .Basic-block {
-    padding-bottom: 184px;
+    padding: 32px 0 184px 0;
     background-color: var(--main-bg-color);
 }
 

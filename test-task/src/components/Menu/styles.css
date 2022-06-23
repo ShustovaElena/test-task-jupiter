@@ -26,3 +26,23 @@
     text-transform: uppercase;
     cursor: pointer;
 }
+
+@media (max-width: 1200px) {
+    .Navbar {
+        gap: 70px;
+    }
+}
+
+@media (max-width: 1040px) {
+    .Menu {
+        justify-content: center;
+    }
+
+    .Navbar {
+        display: none;
+    }
+
+    .Contact-button {
+        display: none;
+    }
+}

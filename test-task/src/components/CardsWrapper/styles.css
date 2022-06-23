@@ -3,6 +3,19 @@
     flex-direction: row;
     gap: 30px;
     flex-wrap: wrap;
-    margin: 0 auto;
-    width: 1200px;
+    margin: 48px auto 0 auto;
+    width: 1170px;
+}
+
+@media (max-width: 1200px) {
+    .Card-wrapper {
+        width: 780px;
+    }
+}
+
+@media (max-width: 1040px) {
+    .Card-wrapper {
+        flex-direction: column;
+        width: 390px;
+    }
 }

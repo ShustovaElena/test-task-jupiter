@@ -1,25 +1,21 @@
+import { useEffect, useState } from "react";
+import Navigation from "../Navigation";
+import Select from "../Select";
 import "./styles.css";
 
 const CardMenu = () => {
-  return (
-    <div className="Card-menu">
-      <a className="Link-menu" href="#">
-        Show All
-      </a>
-      <a className="Link-menu" href="">
-        Design
-      </a>
-      <a className="Link-menu" href="#">
-        Branding
-      </a>
-      <a className="Link-menu" href="#">
-        Illustration
-      </a>
-      <a className="Link-menu" href="#">
-        Motion
-      </a>
-    </div>
-  );
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener("resize", checkWidth);
+  });
+
+  const checkWidth = () => {
+    if (window.screen.width > 1040) return setIsMobile(false);
+    return setIsMobile(true);
+  };
+
+  return isMobile ? <Select /> : <Navigation />;
 };
 
 export default CardMenu;
