@@ -1,11 +1,11 @@
 import React from "react";
-import data from "../../data";
-import { filterData } from "../../redux/dataSlice";
-import { useAppDispatch } from "../../redux/hooks";
+import { setFilterData } from "../../redux/dataSlice";
+import { useAppDispatch, useAppSelector } from "../../redux/hooks";
 import "./styles.css";
 
 const Navigation = () => {
   const dispatch = useAppDispatch();
+  const data = useAppSelector((state) => state.data.initialData);
 
   const menuHandler = (e: React.MouseEvent) => {
     const target = (e.target as HTMLLIElement).innerHTML;
@@ -13,7 +13,7 @@ const Navigation = () => {
     if (target === "Show All") {
       newData = data;
     }
-    dispatch(filterData(newData));
+    dispatch(setFilterData(newData));
   };
 
   return (

@@ -1,9 +1,9 @@
-import data from "../../data";
-import { filterData } from "../../redux/dataSlice";
-import { useAppDispatch } from "../../redux/hooks";
+import { setFilterData } from "../../redux/dataSlice";
+import { useAppDispatch, useAppSelector } from "../../redux/hooks";
 import "./styles.css";
 
 const Select = () => {
+  const data = useAppSelector((state) => state.data.initialData);
   const dispatch = useAppDispatch();
 
   const menuHandler = (e: React.ChangeEvent) => {
@@ -12,7 +12,7 @@ const Select = () => {
     if (target === "Show All") {
       newData = data;
     }
-    dispatch(filterData(newData));
+    dispatch(setFilterData(newData));
   };
 
   return (

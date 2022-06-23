@@ -1,27 +1,22 @@
 import { createSlice } from "@reduxjs/toolkit";
-import data from "../data";
-// import { ICard } from "../types";
-
-// interface dataState {
-//   value: ICard[];
-// }
-
-// const initialState: dataState = {
-//   value: data,
-// };
+import { data } from "../data";
 
 export const dataSlice = createSlice({
   name: "data",
   initialState: {
-    value: data,
+    initialData: data,
+    changedValue: data,
   },
   reducers: {
-    filterData: (state, action) => {
-      state.value = action.payload;
+    setFilterData: (state, action) => {
+      state.changedValue = action.payload;
+    },
+    setLoadData: (state, action) => {
+      state.initialData = action.payload;
     },
   },
 });
 
-export const { filterData } = dataSlice.actions;
+export const { setFilterData, setLoadData } = dataSlice.actions;
 
 export default dataSlice.reducer;

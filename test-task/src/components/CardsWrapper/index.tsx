@@ -3,7 +3,7 @@ import Card from "../Card";
 import "./styles.css";
 
 const CardsWrapper = () => {
-  const data = useAppSelector((state) => state.data.value);
+  const data = useAppSelector((state) => state.data.changedValue);
 
   return (
     <div className="Card-wrapper">
