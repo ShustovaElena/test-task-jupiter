@@ -1,4 +1,3 @@
-import "./App.css";
 import BasicBlock from "./components/BasicBlock";
 import Header from "./components/Header";
 

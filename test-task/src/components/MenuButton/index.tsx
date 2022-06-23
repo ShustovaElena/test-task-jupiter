@@ -1,11 +1,7 @@
 import React from "react";
 import { setFilterData } from "../../redux/dataSlice";
 import { useAppDispatch, useAppSelector } from "../../redux/hooks";
-
-interface IMenuButton {
-  category: string;
-  activeButton: string;
-}
+import { IMenuButton } from "../../types";
 
 const MenuButton = (props: IMenuButton) => {
   const { category, activeButton } = props;

@@ -11,7 +11,7 @@ const BasicBlock = () => {
 
   const loadData = () => {
     const newData = [...data, ...data2];
-    console.log(newData);
+
     dispatch(setLoadData(newData));
     dispatch(setFilterData(newData));
   };

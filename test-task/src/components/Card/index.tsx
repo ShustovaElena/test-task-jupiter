@@ -9,7 +9,6 @@ const Card = (props: ICard) => {
   const [isActive, setIsActive] = useState(false);
 
   const addActiveClass = (e: React.MouseEvent) => {
-    console.log(e.target);
     if ((e.target as HTMLElement).innerHTML !== category) {
       setIsActive(!isActive);
     }

@@ -1,10 +1,7 @@
 import { useAppSelector, useAppDispatch } from "../../redux/hooks";
 import { setFilterData, setLoadData } from "../../redux/dataSlice";
 import "./styles.css";
-
-interface IDelButton {
-  name: string;
-}
+import { IDelButton } from "../../types";
 
 const DeleteButton = (props: IDelButton) => {
   const { name } = props;
@@ -15,6 +12,7 @@ const DeleteButton = (props: IDelButton) => {
   const deleteCard = () => {
     const newData = data.filter((item) => item.name != name);
     const newInitData = initialData.filter((item) => item.name != name);
+
     dispatch(setFilterData(newData));
     dispatch(setLoadData(newInitData));
   };
