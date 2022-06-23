@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import Navigation from "../Navigation";
 import Select from "../Select";
-import "./styles.css";
 
 const CardMenu = () => {
   const [isMobile, setIsMobile] = useState(false);

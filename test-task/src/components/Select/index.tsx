@@ -1,9 +1,23 @@
+import data from "../../data";
+import { filterData } from "../../redux/dataSlice";
+import { useAppDispatch } from "../../redux/hooks";
 import "./styles.css";
 
 const Select = () => {
+  const dispatch = useAppDispatch();
+
+  const menuHandler = (e: React.ChangeEvent) => {
+    const target = (e.target as HTMLSelectElement).value;
+    let newData = data.filter((item) => item.category === target);
+    if (target === "Show All") {
+      newData = data;
+    }
+    dispatch(filterData(newData));
+  };
+
   return (
     <div className="select">
-      <select name="card-menu">
+      <select name="card-menu" onChange={menuHandler}>
         <option className="Link-menu" value="Show All">
           Show All
         </option>
