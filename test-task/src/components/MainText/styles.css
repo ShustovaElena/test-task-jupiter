@@ -1,0 +1,35 @@
+.Main-text {
+    display: block;
+    padding-top: 93px;
+    text-align: center;
+    color: var(--main-text-color);
+}
+
+.Main-text h1 {
+    width: 256px;
+    margin: 0 auto;
+    font-size: 4.5rem;
+}
+
+.Main-text p {
+    width: 570px;
+    padding-top: 34px;
+    margin: 0 auto;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+@media (max-width: 1040px) {
+    .Main-text {
+        padding-top: 79px;
+    }
+
+    .Main-text h1 {
+        width: 202px;
+        font-size: 3.5rem;
+    }
+
+    .Main-text p {
+        width: 359px;
+        padding-top: 22px;
+    }
+}

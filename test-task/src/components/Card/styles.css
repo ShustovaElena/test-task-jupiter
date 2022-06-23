@@ -1,0 +1,27 @@
+.Card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    width: 370px;
+    height: 416px;
+    padding: 0 0 53px 48px;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+}
+
+.Category-button {
+    width: 100px;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 35px;
+    color: var(--link-menu-color);
+    background-color: var(--main-text-color);
+    cursor: pointer;
+}
+
+.Card-name {
+    padding-top: 16px;
+    font-size: 2.5rem;
+    color: var(--main-text-color);
+}

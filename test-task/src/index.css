@@ -1,0 +1,17 @@
+:root {
+    --main-text-color: #ffffff;
+    --header-bg-color: #29293f;
+    --main-bg-color: #fcf0e9;
+    --link-menu-color: #84695a;
+    --active-color: #21cf5a;
+    --select-border: rgba(239, 109, 90, 0.6);
+    --select-focus: #21cf5a;
+    --select-arrow: #ef6d5a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Epilogue', sans-serif;
+}

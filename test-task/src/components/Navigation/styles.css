@@ -1,0 +1,23 @@
+.Card-menu {
+    display: flex;
+    justify-content: space-between;
+    width: 653px;
+    margin: 0 auto;
+    padding: 48px 0 28px 0;
+}
+
+.Card-menu li {
+    list-style-type: none;
+}
+
+.Link-menu {
+    font-weight: 100;
+    text-decoration: none;
+    color: var(--link-menu-color);
+    cursor: pointer;
+}
+
+.Link-menu:active,
+.Link-menu:hover {
+    color: var(--active-color);
+}

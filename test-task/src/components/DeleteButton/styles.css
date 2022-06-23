@@ -1,0 +1,12 @@
+.Delete-button {
+    position: absolute;
+    top: 2%;
+    left: 70%;
+    width: 100px;
+    padding: 10px 18px;
+    border: 1px solid var(--active-color);
+    border-radius: 35px;
+    color: var(--active-color);
+    background-color: inherit;
+    cursor: pointer;
+}

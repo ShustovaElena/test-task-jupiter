@@ -1,0 +1,17 @@
+.Basic-block {
+    padding: 32px 0 184px 0;
+    background-color: var(--main-bg-color);
+}
+
+.Load-more {
+    display: block;
+    margin: 80px auto 0 auto;
+    padding: 15px 45px;
+    border: none;
+    background-color: var(--main-text-color);
+    border-radius: 5px;
+    color: var(--link-menu-color);
+    text-transform: uppercase;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
